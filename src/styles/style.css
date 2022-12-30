@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1b2f33;
+}
+.bi-arrow-clockwise {
+  fill: #ef3054;
+  width: 5rem;
+  height: 5rem;
+  animation: rotation 2s infinite linear;
+}
+.hide {
+  display: none;
+}
+
+.nav {
+  background-color: #8c7051;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.addBtn {
+  background-color: #8c7051;
+  color: #ef3054;
+  border: solid 3px #ef3054;
+}
+
+.addBtn:hover {
+  background-color: #ef3054;
+  color: #1b2f33;
+}
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.stockContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.stockCard {
+  background-color: #8c7051;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.close:hover {
+  color: #ef3054;
+  cursor: pointer;
+}
+
+.stockCardHeader {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stockCardHeading {
+  color: #ef3054;
+  font-weight: bold;
+}
+
+.rating {
+  color: #1b2f33;
+}
+
+.stockCardInfo {
+  color: #1b2f33;
+}
+
+.stockCardLink {
+  color: #ef3054;
+  text-decoration: none;
+}
+
+.stockCardLink:hover {
+  text-decoration: underline;
+}
+
+.addStockBtn {
+  background-color: #1b2f33;
+  color: #ef3054;
+  padding: 2rem;
+  width: 30rem;
+  border-radius: 15px;
+  border: solid 3px #ef3054;
+}
+.addStockBtn:hover {
+  background-color: #ef3054;
+  color: #1b2f33;
+  cursor: pointer;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
