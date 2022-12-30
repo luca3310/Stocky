@@ -1,7 +1,7 @@
 import stockContainerView from "./views/stockContainerView";
 import { state, addStock, closeStock } from "./model";
 
-controlCloseStock = function (id) {
+const controlCloseStock = function (id) {
   closeStock(Number(id));
   stockContainerView.render(state);
 };
