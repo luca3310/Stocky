@@ -11,6 +11,15 @@ class StockContainerView {
     });
   }
 
+  bookmarkHandler(handler) {
+    this.container.addEventListener("click", function (e) {
+      const bookmarkBtn = e.target.closest(".favorite");
+      if (!bookmarkBtn) return;
+      bookmarkBtn.closest(".stockCard").classList.toggle("bookmarked");
+      handler(bookmarkBtn.closest(".stockCard").id);
+    });
+  }
+
   btnHandler(handler) {
     this.btn.addEventListener("click", function () {
       handler();
@@ -47,7 +56,10 @@ class StockContainerView {
   }
   generateStockMarkup(data) {
     return `
-    <div id="${data.id}" class="stockCard">
+    <div id="${data.id}" class="stockCard ${
+      data.bookmarked ? "bookmarked" : ""
+    }">
+    <div class="favorite">*</div>
     <div class="close">X</div>
     <div class="stockCardHeader">
       <h1 class="stockCardHeading">${data.name}</h1>

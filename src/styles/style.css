@@ -62,12 +62,31 @@ main {
   position: relative;
 }
 
+.bookmarked {
+  border: solid #ef3054 !important;
+}
+
 .close {
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.favorite {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
 .close:hover {
+  color: #ef3054;
+  cursor: pointer;
+}
+
+.favorite:hover {
   color: #ef3054;
   cursor: pointer;
 }
@@ -114,6 +133,54 @@ main {
   cursor: pointer;
 }
 
+.dropbtn {
+  background-color: #ef3054;
+  color: #1b2f33;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #8c7051;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content h3 {
+  color: #1b2f33;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.underline {
+  background-color: #1b2f33;
+  height: 1px;
+  width: 100%;
+}
+
+.dropdown-content h3:hover {
+  color: #ef3054;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ef3054;
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);

@@ -7,17 +7,29 @@
     <title>Stocky</title>
     <link rel="stylesheet" href="styles/style.css" />
     <script type="module" src="js/controller.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
   </head>
   <body>
     <nav class="nav">
       <h1 class="titel">Stocky</h1>
       <form action="" class="form">
-        <input type="text" /><button class="addBtn" type="submit">add</button>
+        <input class="input" type="text" />
       </form>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <h3 class="bookmark" id="2">apple</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
     </nav>
     <main>
       <div class="stockContainer"></div>
       <button class="addStockBtn">add stock recommendation</button>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
   </body>
 </html>
